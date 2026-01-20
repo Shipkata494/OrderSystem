@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using System.Text.Json;
 using BuildingBlocks.Shared.Contracts.Orders;
 using MassTransit;
 using Microsoft.AspNetCore.Authorization;
@@ -78,8 +79,16 @@ public class OrdersController : ControllerBase
     {
         var key = $"order:{id}";
         var value = await _redisDb.StringGetAsync(key);
-        if (value.IsNullOrEmpty) return NotFound(new { key, message = "Cache miss" });
 
-        return Ok(new { key, value = value.ToString() });
+        if (value.IsNullOrEmpty)
+            return NotFound(new { key, message = "Cache miss" });
+
+        var dto = JsonSerializer.Deserialize<OrderCreated>(value!);
+
+        return Ok(new
+        {
+            key,
+            cached = dto
+        });
     }
 }

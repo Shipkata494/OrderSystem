@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
 
+using StackExchange.Redis;
+
 using OrderPlatform.Domain.Entities;
 
 using OrderPlatform.Infrastructure.Data;
@@ -44,20 +46,23 @@ internal class Program
             };
         });
 
+        var rabbitHost = builder.Configuration["RabbitMQ:Host"] ?? "localhost";
+        var rabbitUser = builder.Configuration["RabbitMQ:Username"] ?? "orderuser";
+        var rabbitPass = builder.Configuration["RabbitMQ:Password"] ?? "orderpass";
+
         builder.Services.AddMassTransit(x =>
         {
             x.UsingRabbitMq((context, cfg) =>
             {
-                cfg.Host(
-                    builder.Configuration["RabbitMQ:Host"],
-                    h =>
-                    {
-                        h.Username(builder.Configuration["RabbitMQ:Username"]);
-                        h.Password(builder.Configuration["RabbitMQ:Password"]);
-                    });
+                cfg.Host(rabbitHost, h =>
+                {
+                    h.Username(rabbitUser);
+                    h.Password(rabbitPass);
+                });
             });
-        });
-
+        }); 
+        
+        builder.Services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(builder.Configuration["Redis:ConnectionString"]!));
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
