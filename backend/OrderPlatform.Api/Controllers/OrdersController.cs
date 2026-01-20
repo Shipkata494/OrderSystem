@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using OrderPlatform.Api.Models.Orders;
 using OrderPlatform.Domain.Entities;
 using OrderPlatform.Infrastructure.Data;
+using StackExchange.Redis;
 
 namespace OrderPlatform.Api.Controllers;
 
@@ -15,12 +16,14 @@ namespace OrderPlatform.Api.Controllers;
 public class OrdersController : ControllerBase
 {
     private readonly AppDbContext _db;
+    private readonly IDatabase _redisDb;
     private readonly IPublishEndpoint _publish;
 
-    public OrdersController(AppDbContext db, IPublishEndpoint publish)
+    public OrdersController(AppDbContext db, IPublishEndpoint publish, IConnectionMultiplexer redis)
     {
         _db = db;
         _publish = publish;
+        _redisDb = redis.GetDatabase();
     }
 
     [HttpPost]
@@ -37,7 +40,7 @@ public class OrdersController : ControllerBase
         if (request.TotalAmount <= 0)
             return BadRequest("TotalAmount must be > 0.");
 
-        var order = new Order
+        var order = new OrderPlatform.Domain.Entities.Order
         {
             Id = Guid.NewGuid(),
             CustomerName = request.CustomerName.Trim(),
@@ -67,5 +70,16 @@ public class OrdersController : ControllerBase
     {
         var order = await _db.Orders.FirstOrDefaultAsync(x => x.Id == id);
         return order is null ? NotFound() : Ok(order);
+    }
+
+    [HttpGet("{id:guid}/cache")]
+    [Authorize]
+    public async Task<IActionResult> GetCached(Guid id)
+    {
+        var key = $"order:{id}";
+        var value = await _redisDb.StringGetAsync(key);
+        if (value.IsNullOrEmpty) return NotFound(new { key, message = "Cache miss" });
+
+        return Ok(new { key, value = value.ToString() });
     }
 }

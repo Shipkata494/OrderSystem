@@ -163,3 +163,5 @@
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/OrderPlatform.Api.genruntimeconfig.cache
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/ref/OrderPlatform.Api.dll
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/OrderPlatform.Api.sourcelink.json
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/bin/Debug/net8.0/StackExchange.Redis.dll

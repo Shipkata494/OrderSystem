@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BMKiMRvrvyk=",
+  "dgSpecHash": "rFeB9NHzemo=",
   "success": true,
   "projectFilePath": "/Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/OrderPlatform.Api.csproj",
   "expectedPackageFiles": [
@@ -74,7 +74,9 @@
     "/Users/macbook/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "/Users/macbook/.nuget/packages/rabbitmq.client/7.2.0/rabbitmq.client.7.2.0.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/stackexchange.redis/2.8.12/stackexchange.redis.2.8.12.nupkg.sha512",
     "/Users/macbook/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/Users/macbook/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/Users/macbook/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
