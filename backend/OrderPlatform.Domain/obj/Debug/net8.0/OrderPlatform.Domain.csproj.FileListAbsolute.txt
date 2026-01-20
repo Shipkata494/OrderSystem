@@ -9,3 +9,4 @@
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/refint/OrderPlatform.Domain.dll
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.pdb
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/ref/OrderPlatform.Domain.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.sourcelink.json

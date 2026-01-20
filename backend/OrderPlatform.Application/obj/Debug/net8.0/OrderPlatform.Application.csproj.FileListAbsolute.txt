@@ -13,3 +13,4 @@
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/refint/OrderPlatform.Application.dll
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.pdb
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/ref/OrderPlatform.Application.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.sourcelink.json

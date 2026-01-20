@@ -17,3 +17,4 @@
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Infrastructure/obj/Debug/net8.0/OrderPlatform.Infrastructure.pdb
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Infrastructure/obj/Debug/net8.0/OrderPlatform.Infrastructure.genruntimeconfig.cache
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Infrastructure/obj/Debug/net8.0/ref/OrderPlatform.Infrastructure.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Infrastructure/obj/Debug/net8.0/OrderPlatform.Infrastructure.sourcelink.json

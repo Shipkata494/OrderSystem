@@ -10,3 +10,4 @@
 /Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/refint/BuildingBlocks.Shared.dll
 /Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.pdb
 /Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/ref/BuildingBlocks.Shared.dll
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.sourcelink.json

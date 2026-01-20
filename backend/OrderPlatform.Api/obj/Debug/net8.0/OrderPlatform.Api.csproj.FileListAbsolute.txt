@@ -162,3 +162,4 @@
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/OrderPlatform.Api.pdb
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/OrderPlatform.Api.genruntimeconfig.cache
 /Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/ref/OrderPlatform.Api.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Api/obj/Debug/net8.0/OrderPlatform.Api.sourcelink.json
