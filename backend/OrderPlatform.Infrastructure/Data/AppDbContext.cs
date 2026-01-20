@@ -18,5 +18,9 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Order>()
             .Property(o => o.TotalAmount)
             .HasPrecision(18, 2);
+
+        modelBuilder.Entity<OrderEvent>()
+            .HasIndex(e => new { e.OrderId, e.Type })
+            .IsUnique();
     }
 }

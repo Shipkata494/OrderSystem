@@ -68,9 +68,12 @@ namespace OrderPlatform.Infrastructure.Migrations
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderId", "Type")
+                        .IsUnique();
 
                     b.ToTable("OrderEvents");
                 });
