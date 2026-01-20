@@ -1,0 +1,12 @@
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/bin/Debug/net8.0/BuildingBlocks.Shared.deps.json
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/bin/Debug/net8.0/BuildingBlocks.Shared.dll
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/bin/Debug/net8.0/BuildingBlocks.Shared.pdb
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.csproj.AssemblyReference.cache
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.AssemblyInfoInputs.cache
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.AssemblyInfo.cs
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.csproj.CoreCompileInputs.cache
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.dll
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/refint/BuildingBlocks.Shared.dll
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/BuildingBlocks.Shared.pdb
+/Users/macbook/study/OrderSystem/backend/BuildingBlocks.Shared/obj/Debug/net8.0/ref/BuildingBlocks.Shared.dll

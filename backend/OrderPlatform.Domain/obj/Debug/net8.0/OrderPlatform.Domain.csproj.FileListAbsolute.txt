@@ -1,0 +1,11 @@
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/bin/Debug/net8.0/OrderPlatform.Domain.deps.json
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/bin/Debug/net8.0/OrderPlatform.Domain.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/bin/Debug/net8.0/OrderPlatform.Domain.pdb
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.AssemblyInfoInputs.cache
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.AssemblyInfo.cs
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.csproj.CoreCompileInputs.cache
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/refint/OrderPlatform.Domain.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/OrderPlatform.Domain.pdb
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Domain/obj/Debug/net8.0/ref/OrderPlatform.Domain.dll

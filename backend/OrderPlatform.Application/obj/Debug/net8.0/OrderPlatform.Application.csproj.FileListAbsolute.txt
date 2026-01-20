@@ -1,0 +1,15 @@
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/bin/Debug/net8.0/OrderPlatform.Application.deps.json
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/bin/Debug/net8.0/OrderPlatform.Application.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/bin/Debug/net8.0/OrderPlatform.Application.pdb
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/bin/Debug/net8.0/OrderPlatform.Domain.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/bin/Debug/net8.0/OrderPlatform.Domain.pdb
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.csproj.AssemblyReference.cache
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.AssemblyInfoInputs.cache
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.AssemblyInfo.cs
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.csproj.CoreCompileInputs.cache
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPla.4CB86678.Up2Date
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/refint/OrderPlatform.Application.dll
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/OrderPlatform.Application.pdb
+/Users/macbook/study/OrderSystem/backend/OrderPlatform.Application/obj/Debug/net8.0/ref/OrderPlatform.Application.dll

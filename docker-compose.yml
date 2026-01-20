@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: orderplatform-sql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Your_strong_Password123
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - orderplatform-net
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: orderplatform-rabbit
+    environment:
+      - RABBITMQ_DEFAULT_USER=orderuser
+      - RABBITMQ_DEFAULT_PASS=orderpass
+    ports:
+      - "5672:5672"    
+      - "15672:15672"  
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - orderplatform-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: orderplatform-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - orderplatform-net
+
+networks:
+  orderplatform-net:
+
+volumes:
+  mssql_data:
+  rabbitmq_data:
+  redis_data:

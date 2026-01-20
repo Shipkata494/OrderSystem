@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "5OmbIhodyiUKo5LYOGFybDiZMoyP7+oIbwyz/D56olY=",
+  "Source": "OrderPlatform.Api",
+  "BasePath": "_content/OrderPlatform.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
