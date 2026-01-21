@@ -65,6 +65,27 @@ public class OrdersController : ControllerBase
         return Ok(new { orderId = order.Id });
     }
 
+    [Authorize]
+    [HttpPost("{id:guid}/status")]
+    public async Task<IActionResult> SetStatus(Guid id, [FromBody] SetStatusRequest req)
+    {
+        var order = await _db.Orders.FindAsync(id);
+        if (order is null) return NotFound();
+
+        order.Status = req.Status;
+        await _db.SaveChangesAsync();
+
+        await _publish.Publish(new OrderStatusChanged(
+            OrderId: id,
+            Status: req.Status,
+            ChangedAtUtc: DateTime.UtcNow
+        ));
+
+        return Ok(new { order.Id, order.Status });
+    }
+
+    public record SetStatusRequest(string Status);
+
     [HttpGet("{id:guid}")]
     [Authorize]
     public async Task<IActionResult> Get(Guid id)

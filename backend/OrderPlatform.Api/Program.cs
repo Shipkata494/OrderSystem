@@ -34,17 +34,31 @@ internal class Program
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         }).AddJwtBearer(options =>
-        {
-            options.TokenValidationParameters = new TokenValidationParameters
             {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = jwt["Issuer"],
-                ValidAudience = jwt["Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(key)
-            };
-        });
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwt["Issuer"],
+                    ValidAudience = jwt["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+
+                options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs/orders"))
+                            context.Token = accessToken;
+
+                        return Task.CompletedTask;
+                    }
+                };
+            });
 
         var rabbitHost = builder.Configuration["RabbitMQ:Host"] ?? "localhost";
         var rabbitUser = builder.Configuration["RabbitMQ:Username"] ?? "orderuser";
@@ -59,11 +73,13 @@ internal class Program
                     h.Username(rabbitUser);
                     h.Password(rabbitPass);
                 });
+                cfg.ConfigureEndpoints(context);
             });
         }); 
-        
+
         builder.Services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(builder.Configuration["Redis:ConnectionString"]!));
         builder.Services.AddControllers();
+        builder.Services.AddSignalR();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
                 {
@@ -98,15 +114,29 @@ internal class Program
 
         builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("ui", p => p
+                .WithOrigins("http://localhost:5174", "http://127.0.0.1:5174")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
+        });
+
+
         var app = builder.Build();
 
         app.UseSwagger();
         app.UseSwaggerUI();
 
+        app.UseCors("ui");
+
         app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllers();
+        app.MapHub<OrderPlatform.Api.Hubs.OrderHub>("/hubs/orders");
 
         app.Run();
     }

@@ -54,5 +54,11 @@ public class OrderCreatedConsumer : IConsumer<OrderCreated>
             expiry: TimeSpan.FromMinutes(_ttlMinutes));
 
         Console.WriteLine($"[OrderCreatedConsumer] saved event + cached {key} (TTL {_ttlMinutes}m)");
+
+        await context.Publish(new OrderStatusChanged(
+            OrderId: msg.OrderId,
+            Status: "PendingPayment",
+            ChangedAtUtc: DateTime.UtcNow
+        ), context.CancellationToken);
     }
 }
