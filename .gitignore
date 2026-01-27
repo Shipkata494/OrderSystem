@@ -1,0 +1,54 @@
+##################################
+# .NET / C#
+##################################
+bin/
+obj/
+**/bin/
+**/obj/
+
+*.dll
+*.exe
+*.pdb
+*.cache
+*.deps.json
+*.runtimeconfig.json
+
+.vs/
+.vscode/
+.idea/
+
+##################################
+# ASP.NET / user secrets
+##################################
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+##################################
+# Logs
+##################################
+*.log
+
+##################################
+# Node / React / Vite
+##################################
+node_modules/
+dist/
+build/
+.vite/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+##################################
+# OS
+##################################
+.DS_Store
+Thumbs.db
+
+##################################
+# Redis / Docker junk (optional)
+##################################
+dump.rdb
